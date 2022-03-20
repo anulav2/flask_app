@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Classification</title>
+    <link rel="stylesheet"  href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <div class="navbar"> 
+        <div class="container">           
+            <nav>
+                <ul class="nav">
+                    <li class="current"><a href="#">"Home"</a></li>
+                    <li><a href="{{ url_for('dashboard') }}">"Dashboard"</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+    </div>
+    
+    <section class="hero">
+        <div class="conatiner">
+            <div class="leftcol">
+                <p classs="subhead">"It's all about probabilities..."</p>
+                <h1>ML App that predicts Categories!!</h1>
+                <div class="hero-cta">
+                        <iframe width="420" height="315"
+                        src="https://www.youtube.com/embed/1CDT4LiKmM4" frameborder="0">
+                        </iframe>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    
+    <section class="textbox">
+        <form action="{{ url_for('results')}}" method="POST">
+            <h4>Enter News Text Here To Predict Category</h4>
+            <!-- <input type="text" name="comment"/> -->
+            <textarea name="message" rows="6" cols="70"></textarea>
+            <br/>
+            <input type="submit" class="btn-info" value="results">
+        </form>
+    </section>
+    
+    <section class="featuressection">
+        <div class="container">
+            <ul class="featureslist">
+                <li>App uses Naive Bayes theorum to predict categories for NEWS text. Please input text above and press 'results' to test the app..</li>
+                <br/>
+                <li>Click Dashboard to see how this APP predicted categories for 700 news samples.</li>
+                <br/>
+                <li>Watch Video description of a Published Paper.</li>
+                <br/>
+                <li>This app was created using Python Flask Framework.</li>
+                <br/>
+                <li>Created by Anubhav Lavania. Indiana Universrity, Bloomington.</li>
+                <br/>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
